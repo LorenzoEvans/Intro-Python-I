@@ -1,3 +1,4 @@
+import sys
 """
 Python is a strongly-typed language under the hood, which means 
 that the types of values matter, especially when we're trying
@@ -19,3 +20,4 @@ print(x + int(y))
 # Write a print statement that combines x + y into the string value 57
 
 print(str(x) + y)
+print(sys.argv)
