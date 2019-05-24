@@ -16,14 +16,19 @@ print(x + y)
 
 # Change x so that it is [1, 2, 3, 4, 9, 10]
 # YOUR CODE HERE 
-print(x)
+print(x + y[1:])
 
 # Change x so that it is [1, 2, 3, 4, 9, 99, 10]
 # YOUR CODE HERE 
-print(x)
+
+print(x + y[:2] + [99, 10])
 
 # Print the length of list x
 print(len(x))
 
 # Print all the values in x multiplied by 1000
 # YOUR CODE HERE
+
+x = [n*1000 for n in x]
+
+print(x)
