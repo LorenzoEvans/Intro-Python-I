@@ -22,16 +22,25 @@ print(sys.platform)
 # Print out the version of Python you're using:
 # YOUR CODE HERE
 
-print({"Simple": sys.version, "Verbose": sys.version_info})
+version_dict = {"Simple": sys.version, "Verbose": sys.version_info}
+print(version_dict)
 
 import os
 # See the docs for the OS module: https://docs.python.org/3.7/library/os.html
 
 # Print the current process ID
-# YOUR CODE HERE
+
+current_pid = os.getpid()
+
+print(current_pid)
 
 # Print the current working directory (cwd):
-# YOUR CODE HERE
 
+cwd = os.getcwd
+
+print(cwd)
 # Print out your machine's login name
-# YOUR CODE HERE
+login_name = os.getlogin()
+
+print(login_name)
+
