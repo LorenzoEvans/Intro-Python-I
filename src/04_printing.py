@@ -12,6 +12,16 @@ z = "I like turtles!"
 # y, and z:
 # x is 10, y is 2.25, z is "I like turtles!"
 
+
+print("x is %sx, y is %s, z is %s." % (x, y, z))
+
 # Use the 'format' string method to print the same thing
+string_dict = {'x': x, 'y': y, 'z': z}
+
+print("x is {x}, y is {y}, z is {z}.".format(**string_dict))
 
 # Finally, print the same thing using an f-string
+
+last_format = f"x is {x}, y is {y}, z is {z}."
+
+print(last_format)
