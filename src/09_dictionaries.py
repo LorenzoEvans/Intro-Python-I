@@ -51,8 +51,9 @@ print(waypoints[1])
 # Write a loop that prints out all the field values for all the waypoints
 # YOUR CODE HERE
 
-# def waypointer(way_list):
-#  for x, y in way_list.items():
-#   print(x, y)
-
-# print(waypointer(waypoints))
+def waypointer():
+ for x in waypoints:
+  for i in x:
+   print(i)
+  
+print(waypointer())
