@@ -29,13 +29,24 @@ print('name:', exp_waypoint.lat)
 # `size`, `lat`, and `lon` to the constructor. What should it inherit from?
 
 class Geocache(Waypoint):
- def __init__(self, lat, lon, difficulty, size, name):
-  super().__init__(difficulty, size, name)
+ def __init__(self, lat, lon, name, difficulty, size):
+  super().__init__(name, difficulty, size)
   self.difficulty = difficulty
   self.size = size
+  self.lat = lat
+  self.lon = lon
+  self.name = name
+  self.size = size
+ def __repr__(self):
+  return "Geocache: lat: %s lon: %s difficulty: %s size: %s name: %s" % (
+   self.lat, 
+   self.lon, 
+   self.difficulty, 
+   self.size, 
+   self.name)
 
 exp_geocache = Geocache(12, 34, 'hard', 900, 'terrain')
-print(exp_geocache.size)
+# print(exp_geocache.size)
 
 # Make a new waypoint and print it out: "Catacombs", 41.70505, -121.51521
 
@@ -43,11 +54,11 @@ waypoint = Waypoint(41.70505, -121.51521, 'Catacombs')
 
 # Without changing the following line, how can you make it print into something
 # more human-readable? Hint: Look up the `object.__str__` method
-print(waypoint)
+# print(waypoint)
 
 # Make a new geocache "Newberry Views", diff 1.5, size 2, 44.052137, -121.41556
 
-# YOUR CODE HERE
 
+geocache = Geocache(44.052137, -121.41556, 'Newberry Views', 1.5, 2)
 # Print it--also make this print more nicely
-# print(geocache)
+print(geocache)
