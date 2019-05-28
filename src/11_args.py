@@ -30,20 +30,20 @@ a = [7, 6, 5, 4]
 
 # What thing do you have to add to make this work?
 
-print('here', f2(sum(a)))    # Should print 22
+print(f2(sum(a)))    # Should print 22
 
 # Write a function f3 that accepts either one or two arguments. If one argument,
 # it returns that value plus 1. If two arguments, it returns the sum of the
 # arguments. Google "python default arguments" for a hint.
 
-# def f3(param_one=x, param_two=y):
-#  if param_one:
-#   return param_one + 1
-#  elif param_one and param_two:
-#   return param_one + param_two
+def f3(param_one, param_two=0):
+ if param_two:
+  return param_one + param_two
+ elif not param_two:
+  return param_one + 1
 
-# print(f3(1, 2))  # Should print 3
-# print(f3(8))     # Should print 9
+print(f3(1, 2))  # Should print 3
+print(f3(8))     # Should print 9
 
 
 # Write a function f4 that accepts an arbitrary number of keyword arguments and
