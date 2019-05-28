@@ -21,4 +21,8 @@ print(foo_read())
 # then close the file. Open up "bar.txt" and inspect it to make 
 # sure that it contains what you expect it to contain
 
-bar_txt = open('bar.txt', 'w')
+bar_txt = open('bar.txt', 'r+')
+
+bar_txt.write('The marathon continues, Stay ten toes down, It\'s not on you, it\'s in you.')
+
+print(bar_txt.read())
